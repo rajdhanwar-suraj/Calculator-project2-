@@ -1,12 +1,12 @@
-let string = "";
-let buttons = document.querySelectorAll('.button');
-
-Array.from(buttons).forEach((button) => {
-    button.addEventListener('click', (e) => {
+let number = document.querySelectorAll('button');
+let display = document.getElementsByClassName('screen');
+let string = '';
+Array.from(number).forEach((button)=> {
+    button.addEventListener('click', (e)=>{
         if (e.target.innerHTML == '=') {
             string = eval(string);
             document.querySelector('input').value = string;
-        } else if (e.target.innerHTML == 'c') {
+        }else if (e.target.innerHTML == 'C') {
             string = "";
             document.querySelector('input').value = string;
         }
@@ -16,6 +16,4 @@ Array.from(buttons).forEach((button) => {
             document.querySelector('input').value = string;
         }
     })
-})
-
-
+});
